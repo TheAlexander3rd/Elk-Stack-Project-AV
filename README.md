@@ -34,7 +34,7 @@ The configuration details of each machine may be found below.
 | Name                | Function   | IP Address                                          | Operating System |
 |---------------------|------------|-----------------------------------------------------|------------------|
 | Jump-Box-Provisoner | Gateway    | Public: 104.40.3.212  Private: 10.0.0.4             | Linux            |
-| ELK-Server          | Monitoring | Public: 137.117.64.61 Private: 10.1.0.4             | Linux            |
+| ELK-Server          | Monitoring | Public: 52.186.17.211 Private: 10.1.0.4             | Linux            |
 | Web-1               | Server     | Public: N/A           Private: 10.0.0.7             | Linux            |
 | Web-2               | Server     | Public: N/A           Private: 10.0.0.8             | Linux            |
 
@@ -83,11 +83,11 @@ I have installed the following Beats on these machines:
 - Filebeat
 - Metricbeat 
 
-| Name       | IP Address   |
-|------------|--------------|
-| Web-1      | 10.0.0.7     |
-| Web-2      | 10.0.0.18    |
-| ELK-Server | 137.117.64.61|
+| Name       | IP Address    |
+|------------|---------------|
+| Web-1      | 10.0.0.7      |
+| Web-2      | 10.0.0.18     |
+| ELK-Server | 52.186.17.211 |
 
 These Beats allow us to collect the following information from each machine:
 -filebeat collects log data and shows them in the monitoring clusters. 
