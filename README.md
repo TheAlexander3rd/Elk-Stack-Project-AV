@@ -9,7 +9,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 -_Ansible YAML/install-elk.yml.txt_
   
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -19,40 +19,43 @@ This document contains the following details:
 
 ### Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the _Damn Vulnerable Web Application_.
 
-Load balancing ensures that the application will be highly available for customers, in addition to restricting attacks to the network. If a server goes down, or needs to be updated, services will still continue.
--The advantage of using a jump box is that only the jump box can access the Virutal network via ssh. 
+Load balancing ensures that the application will be highly available for customers, in addition to restricting attacks to the network. 
+-The off-loading function of a load balancer can help defend an organization against distributed denial-of-service (DDoS) attacks. So If a server goes down, or needs to be updated, services will still continue.
+-The advantage of using a Jump Box is that only the Jump Box can access the Virutal network via ssh. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
 - Filebeat monitors the log files or locations specified, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
-- Metricbeat is an extremely easy-to-use, efficient and reliable metric shipper for monitoring your system and the processes running on it. 
+- Metricbeat is an extremely easy-to-use, efficient and reliable metric shipper for monitoring your system and the processes running on it.
+
 The configuration details of each machine may be found below.
 
-| Name       | Function   | IP Address                              | Operating System |
-|------------|------------|-----------------------------------------|------------------|
-| Jump-Box   | Gateway    | Public: 104.40.3.212  Private: 10.0.0.4  | Linux           |
-| Web-1      | Server     | Public: N/A           Private: 10.0.0.7  | Linux           |
-| Web-2      | Server     | Public: N/A           Private: 10.0.0.8  | Linux           |
-| ELK-Server | Monitoring | Public: 137.117.64.61 Private: 10.1.0.4  | Linux           |
+| Name                | Function   | IP Address                                          | Operating System |
+|---------------------|------------|-----------------------------------------------------|------------------|
+| Jump-Box-Provisoner | Gateway    | Public: 104.40.3.212  Private: 10.0.0.4             | Linux            |
+| ELK-Server          | Monitoring | Public: 137.117.64.61 Private: 10.1.0.4             | Linux            |
+| Web-1               | Server     | Public: N/A           Private: 10.0.0.7             | Linux            |
+| Web-2               | Server     | Public: N/A           Private: 10.0.0.8             | Linux            |
+
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 5061 Kibana port
+71.93.143.239 5061 Kibana port
 
 Machines within the network can only be accessed by the Jump-Box-Provisioner.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name       | Publicly Accessible  | Allowed IP Address |
-|------------|----------------------|--------------------|
+| Name       | Publicly Accessible  | Allowed IP Address                    |
+|------------|----------------------|---------------------------------------|
 | Jump Box   | yes                  | 71.93.143.239/Local Machine Public IP |
-| Web-1      | no                   | 10.0.0.4           |
-| Web-2      | no                   | 10.0.0.4           |
-| ELK-Server | no                   | 10.0.0.4/71.93.143.239 |
+| Web-1      | no                   | 10.0.0.4                              |
+| Web-2      | no                   | 10.0.0.4                              |
+| ELK-Server | no                   | 10.0.0.4/71.93.143.239                |
 
 ### Elk Configuration
 
@@ -62,8 +65,7 @@ The playbook implements the following tasks:
 - Install docker.io
 - Install python3-pip
 - Install docker via pip
-- Increase vitual memory  
-- Use more memory 
+- Increase virtualmemory /Use more memory 
 - Download and launch a docker elk container - starts docker and establishes the ports being used.  
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
