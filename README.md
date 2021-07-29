@@ -49,10 +49,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name       | Publicly Accessible  | Allowed IP Address |
 |------------|----------------------|--------------------|
-| Jump Box   | yes                  | 104.40.3.212       |
-| Web-1      | no                   | 10.0.0.7           |
-| Web-2      | no                   | 10.0.0.8           |
-| ELK-Server | no                   | 10.0.0.8           |
+| Jump Box   | yes                  | 71.93.143.239/Local Machine Public IP |
+| Web-1      | no                   | 10.0.0.4           |
+| Web-2      | no                   | 10.0.0.4           |
+| ELK-Server | no                   | 10.0.0.4/71.93.143.239 |
 
 ### Elk Configuration
 
