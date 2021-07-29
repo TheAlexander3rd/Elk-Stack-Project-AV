@@ -65,12 +65,12 @@ The playbook implements the following tasks:
 - Install docker.io
 - Install python3-pip
 - Install docker via pip
-- Increase virtualmemory /Use more memory 
+- Increase virtual memory/Use more memory 
 - Download and launch a docker elk container - starts docker and establishes the ports being used.  
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+The following screenshot displays the result of running `sudo docker ps` after successfully configuring the ELK instance.
 
-!ELK-Stack-Project/Diagrams/Screen Shot 2020-12-09 at 4.52.41 PM.png
+!ELK-Stack-Project/Diagrams/dockerpsSC.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -100,5 +100,5 @@ SSH into the control node and follow the steps below:
 - Copy the playbook (.yml) file to Ansible directory.
 - Update the host file to include webserver and ELK. 
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected. 
-   ( http://[your.VM.IP]:5601/app/kibana )
+ Kibana Portal Address - ( http://[your.VM.IP]:5601/app/kibana )
 
